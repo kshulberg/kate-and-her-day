@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Reading Practice</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, "Trebuchet MS", sans-serif;
+    background: linear-gradient(180deg, #fff7fb, #f7f4ff);
+    color: #322b35;
+  }
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 18px 50px;
+  }
+  .card {
+    background: #fff;
+    border: 2px solid #f0c9df;
+    border-radius: 24px;
+    box-shadow: 0 14px 34px rgba(90, 60, 80, 0.12);
+    padding: 28px;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+    color: #a94e82;
+    font-size: clamp(28px, 4vw, 42px);
+  }
+  .instructions {
+    margin: 8px 0 26px;
+    text-align: center;
+    color: #746776;
+    font-size: 15px;
+  }
+  .reading-text {
+    font-size: clamp(19px, 2.3vw, 23px);
+    line-height: 1.9;
+  }
+  .reading-text p {
+    margin: 0 0 20px;
+  }
+  .word {
+    display: inline-block;
+    position: relative;
+    padding: 0 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color .15s ease, transform .15s ease;
+  }
+  .word:hover,
+  .word:focus {
+    background: #fde5f2;
+    outline: none;
+    transform: translateY(-1px);
+  }
+  #tooltip {
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    max-width: 260px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    background: #403642;
+    color: white;
+    font-size: 15px;
+    line-height: 1.35;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    pointer-events: none;
+  }
+  .note {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #8e808f;
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="card">
+    <h1>English Reading Practice</h1>
+    <div class="instructions">
+      Наведи курсор на слово, чтобы увидеть перевод. Нажми на слово, чтобы услышать произношение.
+    </div>
+
+    <div class="reading-text">
+      <p><span class="word" tabindex="0" data-word="My" data-translation="мой / моя">My</span> <span class="word" tabindex="0" data-word="name" data-translation="имя">name</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="Kate" data-translation="Кейт">Kate</span>. <span class="word" tabindex="0" data-word="I" data-translation="я">I</span> <span class="word" tabindex="0" data-word="am" data-translation="есть / являюсь">am</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="smart" data-translation="умная">smart</span> <span class="word" tabindex="0" data-word="girl" data-translation="девочка">girl</span>. <span class="word" tabindex="0" data-word="I" data-translation="я">I</span> <span class="word" tabindex="0" data-word="am" data-translation="есть / являюсь">am</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="lazy" data-translation="ленивая">lazy</span>.</p><p><span class="word" tabindex="0" data-word="This" data-translation="это">This</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="my" data-translation="мой / моя">my</span> <span class="word" tabindex="0" data-word="friend" data-translation="друг">friend</span> <span class="word" tabindex="0" data-word="Sam" data-translation="Сэм">Sam</span>. <span class="word" tabindex="0" data-word="He" data-translation="он">He</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="tall" data-translation="высокий">tall</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="calm" data-translation="спокойный">calm</span>. <span class="word" tabindex="0" data-word="He" data-translation="он">He</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="short" data-translation="низкий / короткий">short</span>. <span class="word" tabindex="0" data-word="His" data-translation="его">His</span> <span class="word" tabindex="0" data-word="hair" data-translation="волосы">hair</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="dark" data-translation="тёмный">dark</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="his" data-translation="его">his</span> <span class="word" tabindex="0" data-word="T-shirt" data-translation="футболка">T-shirt</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="green" data-translation="зелёный">green</span>.</p><p><span class="word" tabindex="0" data-word="This" data-translation="это">This</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="Mary" data-translation="Мэри">Mary</span>. <span class="word" tabindex="0" data-word="She" data-translation="она">She</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="happy" data-translation="счастливая">happy</span> <span class="word" tabindex="0" data-word="today" data-translation="сегодня">today</span>. <span class="word" tabindex="0" data-word="She" data-translation="она">She</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="sad" data-translation="грустная">sad</span>. <span class="word" tabindex="0" data-word="She" data-translation="она">She</span> <span class="word" tabindex="0" data-word="has" data-translation="имеет / у него(неё) есть">has</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="gray" data-translation="серый">gray</span> <span class="word" tabindex="0" data-word="cat" data-translation="кот / кошка">cat</span>. <span class="word" tabindex="0" data-word="The" data-translation="определённый артикль">The</span> <span class="word" tabindex="0" data-word="cat" data-translation="кот / кошка">cat</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="on" data-translation="на">on</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="chair" data-translation="стул">chair</span> <span class="word" tabindex="0" data-word="next" data-translation="рядом">next</span> <span class="word" tabindex="0" data-word="to" data-translation="к / рядом с">to</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="stairs" data-translation="лестница">stairs</span>.</p><p><span class="word" tabindex="0" data-word="We" data-translation="мы">We</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="in" data-translation="в">in</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="school" data-translation="школа">school</span>. <span class="word" tabindex="0" data-word="We" data-translation="мы">We</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="good" data-translation="хорошие">good</span> <span class="word" tabindex="0" data-word="friends" data-translation="друзья">friends</span>. <span class="word" tabindex="0" data-word="We" data-translation="мы">We</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="in" data-translation="в">in</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="park" data-translation="парк">park</span>. <span class="word" tabindex="0" data-word="Our" data-translation="наш">Our</span> <span class="word" tabindex="0" data-word="classroom" data-translation="класс / классная комната">classroom</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="big" data-translation="большой">big</span>.</p><p><span class="word" tabindex="0" data-word="Look" data-translation="посмотри / смотреть">Look</span> <span class="word" tabindex="0" data-word="at" data-translation="на / у">at</span> <span class="word" tabindex="0" data-word="Tom" data-translation="Том">Tom</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="Rose" data-translation="Роуз">Rose</span>. <span class="word" tabindex="0" data-word="They" data-translation="они">They</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="in" data-translation="в">in</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="yard" data-translation="двор">yard</span>. <span class="word" tabindex="0" data-word="They" data-translation="они">They</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="in" data-translation="в">in</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="house" data-translation="дом">house</span>. <span class="word" tabindex="0" data-word="Tom" data-translation="Том">Tom</span> <span class="word" tabindex="0" data-word="has" data-translation="имеет / у него(неё) есть">has</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="black" data-translation="чёрный">black</span> <span class="word" tabindex="0" data-word="book" data-translation="книга">book</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="Rose" data-translation="Роуз">Rose</span> <span class="word" tabindex="0" data-word="has" data-translation="имеет / у него(неё) есть">has</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="blue" data-translation="синий">blue</span> <span class="word" tabindex="0" data-word="notebook" data-translation="тетрадь">notebook</span>.</p><p><span class="word" tabindex="0" data-word="You" data-translation="ты / вы">You</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="my" data-translation="мой / моя">my</span> <span class="word" tabindex="0" data-word="teacher" data-translation="учитель">teacher</span>. <span class="word" tabindex="0" data-word="You" data-translation="ты / вы">You</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="fair" data-translation="справедливый">fair</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="kind" data-translation="добрый">kind</span>. <span class="word" tabindex="0" data-word="You" data-translation="ты / вы">You</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="angry" data-translation="сердитый">angry</span>.</p><p><span class="word" tabindex="0" data-word="It" data-translation="это / оно">It</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="hot" data-translation="жаркий">hot</span> <span class="word" tabindex="0" data-word="day" data-translation="день">day</span>. <span class="word" tabindex="0" data-word="It" data-translation="это / оно">It</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="cold" data-translation="холодный">cold</span>. <span class="word" tabindex="0" data-word="There" data-translation="там / конструкция there is/are">There</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="clouds" data-translation="облака">clouds</span> <span class="word" tabindex="0" data-word="in" data-translation="в">in</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="sky" data-translation="небо">sky</span>, <span class="word" tabindex="0" data-word="but" data-translation="но">but</span> <span class="word" tabindex="0" data-word="there" data-translation="там / конструкция there is/are">there</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="no" data-translation="нет / никакой">no</span> <span class="word" tabindex="0" data-word="storm" data-translation="буря / гроза">storm</span>.</p><p><span class="word" tabindex="0" data-word="A" data-translation="неопределённый артикль">A</span> <span class="word" tabindex="0" data-word="brown" data-translation="коричневый">brown</span> <span class="word" tabindex="0" data-word="bird" data-translation="птица">bird</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="in" data-translation="в">in</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="garden" data-translation="сад">garden</span>. <span class="word" tabindex="0" data-word="A" data-translation="неопределённый артикль">A</span> <span class="word" tabindex="0" data-word="green" data-translation="зелёный">green</span> <span class="word" tabindex="0" data-word="frog" data-translation="лягушка">frog</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="next" data-translation="рядом">next</span> <span class="word" tabindex="0" data-word="to" data-translation="к / рядом с">to</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="pond" data-translation="пруд">pond</span>. <span class="word" tabindex="0" data-word="A" data-translation="неопределённый артикль">A</span> <span class="word" tabindex="0" data-word="gray" data-translation="серый">gray</span> <span class="word" tabindex="0" data-word="mouse" data-translation="мышь">mouse</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="under" data-translation="под">under</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="tree" data-translation="дерево">tree</span>. <span class="word" tabindex="0" data-word="The" data-translation="определённый артикль">The</span> <span class="word" tabindex="0" data-word="bird" data-translation="птица">bird</span>, <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="frog" data-translation="лягушка">frog</span>, <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="mouse" data-translation="мышь">mouse</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="afraid" data-translation="испуганный / боится">afraid</span>.</p><p><span class="word" tabindex="0" data-word="At" data-translation="на / у">At</span> <span class="word" tabindex="0" data-word="the" data-translation="определённый артикль">the</span> <span class="word" tabindex="0" data-word="afternoon" data-translation="день / после полудня">afternoon</span> <span class="word" tabindex="0" data-word="we" data-translation="мы">we</span> <span class="word" tabindex="0" data-word="watch" data-translation="смотреть">watch</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="film" data-translation="фильм">film</span> <span class="word" tabindex="0" data-word="about" data-translation="о / про">about</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="king" data-translation="король">king</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="a" data-translation="неопределённый артикль">a</span> <span class="word" tabindex="0" data-word="queen" data-translation="королева">queen</span>. <span class="word" tabindex="0" data-word="The" data-translation="определённый артикль">The</span> <span class="word" tabindex="0" data-word="king" data-translation="король">king</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="brave" data-translation="храбрый">brave</span>. <span class="word" tabindex="0" data-word="The" data-translation="определённый артикль">The</span> <span class="word" tabindex="0" data-word="queen" data-translation="королева">queen</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="kind" data-translation="добрый">kind</span>. <span class="word" tabindex="0" data-word="They" data-translation="они">They</span> <span class="word" tabindex="0" data-word="are" data-translation="есть / являемся">are</span> <span class="word" tabindex="0" data-word="not" data-translation="не">not</span> <span class="word" tabindex="0" data-word="poor" data-translation="бедный">poor</span>. <span class="word" tabindex="0" data-word="Their" data-translation="их">Their</span> <span class="word" tabindex="0" data-word="room" data-translation="комната">room</span> <span class="word" tabindex="0" data-word="is" data-translation="есть / является">is</span> <span class="word" tabindex="0" data-word="golden" data-translation="золотой">golden</span> <span class="word" tabindex="0" data-word="and" data-translation="и">and</span> <span class="word" tabindex="0" data-word="big" data-translation="большой">big</span>.</p>
+    </div>
+
+    <div class="note">🔊 Click any English word to hear it.</div>
+  </section>
+</main>
+
+<div id="tooltip"></div>
+
+<script>
+const tooltip = document.getElementById('tooltip');
+
+function positionTooltip(x, y) {
+  const gap = 14;
+  tooltip.style.left = (x + gap) + 'px';
+  tooltip.style.top = (y + gap) + 'px';
+
+  const rect = tooltip.getBoundingClientRect();
+
+  if (rect.right > window.innerWidth - 10) {
+    tooltip.style.left = Math.max(10, x - rect.width - gap) + 'px';
+  }
+  if (rect.bottom > window.innerHeight - 10) {
+    tooltip.style.top = Math.max(10, y - rect.height - gap) + 'px';
+  }
+}
+
+function showTooltip(el, x, y) {
+  tooltip.textContent = '🇷🇺 ' + el.dataset.translation;
+  tooltip.style.display = 'block';
+  positionTooltip(x, y);
+}
+
+function hideTooltip() {
+  tooltip.style.display = 'none';
+}
+
+function speak(word) {
+  if (!('speechSynthesis' in window)) {
+    alert('Your browser does not support speech synthesis.');
+    return;
+  }
+
+  speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.82;
+  utterance.pitch = 1;
+
+  const voices = speechSynthesis.getVoices();
+  const englishVoice =
+    voices.find(v => v.lang === 'en-US') ||
+    voices.find(v => v.lang.startsWith('en'));
+
+  if (englishVoice) {
+    utterance.voice = englishVoice;
+  }
+
+  speechSynthesis.speak(utterance);
+}
+
+document.querySelectorAll('.word').forEach(el => {
+  el.addEventListener('mouseenter', e => {
+    showTooltip(el, e.clientX, e.clientY);
+  });
+
+  el.addEventListener('mousemove', e => {
+    positionTooltip(e.clientX, e.clientY);
+  });
+
+  el.addEventListener('mouseleave', hideTooltip);
+
+  el.addEventListener('focus', () => {
+    const r = el.getBoundingClientRect();
+    showTooltip(el, r.left + r.width / 2, r.bottom);
+  });
+
+  el.addEventListener('blur', hideTooltip);
+
+  el.addEventListener('click', () => {
+    speak(el.dataset.word);
+  });
+
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      speak(el.dataset.word);
+    }
+  });
+});
+
+speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+</script>
+</body>
+</html>
